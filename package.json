@@ -2,9 +2,10 @@
   "name": "pokedexdevf",
   "version": "1.0.0",
   "description": "Proyecto JsAvanzado Devf",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,9 @@
   "homepage": "https://github.com/DielanRM/pokedexDevf#readme",
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
   }
 }
