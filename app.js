@@ -1,11 +1,11 @@
 import { callPokemons, pokemons } from "./src/controllers/apiCall.js";
+import { listaNueva } from "./src/view/vista.js";
 
 
 
 
 
-    callPokemons()
 console.log(`estamos dentro ${pokemons}`);
-
+console.log('+++++++++++++++++++++++++++++++++++', listaNueva);
 
 

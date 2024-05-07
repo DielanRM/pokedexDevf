@@ -1,8 +1,11 @@
 class Pokemon{
-    constructor(nombre, tipo){
+    constructor(nombre, tipo, peso, imagen, movimientos){
         this.nombre = nombre,
-        this.tipo = tipo
+        this.tipo = tipo,
+        this.peso = peso,
+        this.imagen = imagen,
+        this.movimientos = movimientos
     }
 }
 
-export class Pokemon{}
+export default Pokemon

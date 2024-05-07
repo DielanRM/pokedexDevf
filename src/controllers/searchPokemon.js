@@ -1,5 +1,6 @@
-import { searchButton } from "../constants.js";
+// import { searchButton } from "../constants.js";
 
-searchButton.addEventListener('click', function () {
+// searchButton.addEventListener('click', function () {
     
-})
+// })
+
