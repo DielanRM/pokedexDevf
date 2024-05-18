@@ -15,9 +15,6 @@ async function busqueda() {
         console.log("=================================");
         console.log(encontrado[index]);
 
-
-
-
         let movimientos = encontrado[index].movimientos
 
         console.log(movimientos);
