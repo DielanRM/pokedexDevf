@@ -4,7 +4,7 @@ body{
 }
 
 header{
-    background-color: aqua;
+    background-color: rgba(223, 8, 8, 0.911);
     position: fixed;
     width: 100%;
     display: flex;
@@ -61,6 +61,7 @@ body div{
     background-color:  rgba(129, 179, 168, 0.801);
     border-radius: 3rem;
     margin: .5rem;
+    margin-top: 7rem;
     box-sizing: border-box;
     width: 250px;
     height: 400px;
