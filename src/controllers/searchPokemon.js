@@ -2,10 +2,12 @@ import { listapokemons } from "../constants.js";
 import { listaNueva } from "../view/vista.js";
 
 
-async function busqueda () {
-    let nombreInput = document.getElementById("search-input").value
-    let exist = listaNueva.some(nombrePokemon => nombrePokemon.nombre === nombreInput )
+async function busqueda() {
+    let nombreInput = document.getElementById("search-input").value;
+    let exist = listaNueva.some(nombrePokemon => nombrePokemon.nombre === nombreInput)
     listapokemons.innerHTML = '';
+    const pokemonInfo = document.createElement('div')
+    pokemonInfo.classList.add('pokeInfo')
 
     if (exist) {
         let encontrado = listaNueva.filter(name => name.nombre === nombreInput)
@@ -14,9 +16,9 @@ async function busqueda () {
         console.log(encontrado[index]);
 
 
-        const pokemonInfo = document.createElement('div')    
-        pokemonInfo.classList.add('pokeInfo')
-        let movimientos = encontrado[index].movimientos    
+
+
+        let movimientos = encontrado[index].movimientos
 
         console.log(movimientos);
         pokemonInfo.innerHTML = `
@@ -25,14 +27,15 @@ async function busqueda () {
         <h2>Nombre: ${encontrado[index].nombre}</h2>
         <h3>Tipo: ${encontrado[index].tipo}</h3>
         <p>Peso: ${encontrado[index].peso}</p>
-        </div>
-
-        
+        </div>        
         <div class= "info">
         <p>MOVIMIENTOS: </p>
         <p>${movimientos.join(',    -')}</p>
         </div>
         `
+        listapokemons.appendChild(pokemonInfo)
+    } else {
+        pokemonInfo.innerHTML = `<h2>El pokemon ${nombreInput} no existe, porfavor intenta con otro</h2>`
         listapokemons.appendChild(pokemonInfo)
     }
 }
